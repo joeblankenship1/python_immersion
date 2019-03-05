@@ -4,16 +4,16 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username': 'Python & Flask'}
-    posts = [
+    entity = {'entity_name': 'Python & Flask Demo App'}
+    records = [
         {
-            'author': {'username': 'John'},
-            'body': 'Here\s Johnny!'
+            'record_id': {'id': '01'},
+            'text': 'This is record 01!'
         },
         {
-            'author': {'username': 'Susan'},
-            'body': 'Susie Q!'
+            'record_id': {'id': '02'},
+            'text': 'This is record 02!'
         }
     ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
+    return render_template('index.html', title='Home', entity=entity, records=records)
 
